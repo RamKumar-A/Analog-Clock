@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 295px;
+  height: 295px;
+  position: relative;
+  background-image: url('./analog\ clock\ 2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.25),
+    inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3),
+    inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 50% 0%;
+  transform: translate(50%, 50%);
+  background-color: #333;
+  transform: rotate(360deg);
+  /* Initial rotation to make it point upwards */
+  /* transition: transform 0.5s cubic-bezier(0.4, 2.8, 0.6, 1); */
+}
+
+.hrs {
+  height: 40px;
+  width: 5px;
+  transform: translateX(-4px);
+}
+
+.mins {
+  height: 60px;
+  width: 5px;
+  transform: translateX(-3px);
+}
+
+.secs {
+  height: 80px;
+  width: 2px;
+  transform: translateX(-1px);
+  background-color: red;
+}
